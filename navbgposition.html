@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mobile nav bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 600px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: rgba(56, 100, 223, 0.25);
+        position: relative;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .active {
+        background-color: #33aa04;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <div id="myLinks">
+          <a href="#video">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div style="padding-left: 16px">
+        <h3>Vertical Mobile Navbar</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ad
+          consequatur voluptatem reiciendis at dolor eos eius quam iure ducimus
+          ullam architecto commodi maiores vero vel nulla, aspernatur impedit
+          exercitationem?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eligendi
+          ipsa eos cupiditate ad numquam. Voluptatum mollitia corporis aperiam
+          perspiciatis vel quibusdam, dolor voluptates omnis. Voluptatem minus
+          expedita eveniet quo!
+        </p>
+      </div>
+
+      <!-- End smartphone / tablet look -->
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
